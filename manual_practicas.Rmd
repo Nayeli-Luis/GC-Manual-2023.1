@@ -1,0 +1,111 @@
+--- 
+title: "Manual de prácticas: Genómica computacional"
+author: "Nayeli Luis"
+date: "`r Sys.Date()`"
+site: "bookdown::bookdown_site"
+output:
+  bookdown::gitbook: default
+documentclass: book
+---
+
+# Práctica 1. El dogma central de la biología molecular
+**Nayeli Luis**
+
+## Características generales
+
+1. Práctica que se entrega en **parejas**. 
+
+2. Entregables: 
+  * Un archivo PDF con respuestas y descripción del programa. Este archivo debe contener los nombres de los integrantes del equipo y el formato de su nombre es el siguiente: `p1_cuestionario.pdf`
+  * Un script en `Python` (`archivo.py`). Este archivo debe tener como comentario los nombres de los integrantes y el formato del nombre es: `p1_dogma_central.py`.
+  
+Ambos archivos se entregan en Clasroom, y lo deben entregar los dos integrantes del equipo. 
+
+## Instrucciones 
+
+1. Elige una proteína de la siguiente [lista](https://docs.google.com/spreadsheets/d/1TBy1Zj1-M_0Lus6P_ctn-gPXrQyMteOswhn6qg6aeNA/edit?usp=sharing), y busca el archivo en texto plano que le corresponde [aquí](https://drive.google.com/drive/folders/1c1_6uKjQZvAfL6_UO9m_yyTb7GRtYNgM?usp=sharing). Este archivo tiene un formato especial que es conocido como `FASTA`. Los archivos con formato `FASTA` son comunes en la bioinformática pues son archivos de texto plano con secuencias de proteínas o aminoácidos y tienen la siguiente estructura: 
+
+```
+>NZ_CP010822.1 Thermus aquaticus Y51MC23 chromosome, complete genome
+GTGGCCTTGACGCACGAGGCGGTCTGGCAGCACGTTCTGGAGCACATCCGCCGCAACATCACCGAGGTGGAGTACCACAC
+CTGGTTTGAAAGGATCCGCCCCCTGGGTATCCGGGAAGGGGTTTTGGAGCTGGCGGTGCCCACCTCCTTCGCCCTGGACT
+GGATCAAGCGGCACTACGCCCCCCTGATCCAGGAGGCTTTAGGCCTCCTGGGGGCCCAGGTACCCCGCTTTGAGCTTTTG
+GTGGTGCCCGGAGCCGCCCAGCCGGTCCAGGTGGACATCTTCCAGGCCGTCCCCCAGGCCGACCAGGGGAAGTCCAAGCT
+```
+
+La primera línea inicia con `>` e indica un encabezado, que es información sobre la 
+secuencia en cuestión. La segunda línea es la secuencia. Considera ésta información para el desarrollo de tu programa. 
+
+2. Contesta las siguientes preguntas sobre tu proteína: 
+
+  * ¿De qué organismo se trata? Haz una breve descripción del organismo. Te recomiendo que des click en el link que está en la [lista de proteínas](https://docs.google.com/spreadsheets/d/1TBy1Zj1-M_0Lus6P_ctn-gPXrQyMteOswhn6qg6aeNA/edit?usp=sharing) para darte una idea.
+  * El organismo, ¿Es un eucarionte o un procarionte?
+  * ¿La secuencia que se encuentra en el archivo es un gen o el DNA completo del organismo? ¿Por qué?
+  * ¿Ésta proteína es única en el organismo? Sino es el caso, ¿Qué otros organismos la presentan?
+  * ¿Cuál es la función general de la proteína?
+  
+Las respuestas a éstas preguntas deben estar en `p1_cuestionario.pdf`.
+
+3. Crea un programa donde apliques los procesos del dogma central de la biolgía molecular en la secuencia incluida en el archivo de la proteína que elegiste. Considera que ésta secuencia va de 5'-3'.
+
+* El programa debe aceptar como argumento un archivo en formato `FASTA` y debe arrojar como resultado:
+
+  1. La cadena complementaria. 
+  2. La secuencia transcrita, es decir, el mRNA.
+  3. La secuencia de aminoácidos. Es probable que no todos los codones de la cadena de DNA codifiquen para un aminoácido, para éstos codones que el programa arroje un `-` (guión). [Aquí](https://drive.google.com/file/d/1JUFit6yqjYt2Pm2zV_Se1zSFxw_QOjcL/view?usp=sharing) hay un diccionario con el código genético, te dejo [un artículo](https://es.khanacademy.org/science/ap-biology/gene-expression-and-regulation/translation/a/the-genetic-code-discovery-and-properties) por sino recuerdas qué es el código genético y recuerda que siempre puedes utilizar [ésta](https://www.google.com.mx/?hl=es-419) poderosa herramienta de búsqueda.
+  
+
+## Notas importantes
+
+* Para éste ejercicio no tomaremos en cuenta que la secuencia pueda tener regiones promotoras u otro tipo de regiones. 
+
+* No puden utilizar ninguna paquetería de Python que ya tenga implementadas las funciones para hacer esto.
+  
+# Práctica 2. Secuenciación. 
+**Nayeli Luis**
+
+Ésta práctica se entrega de manera **INDIVIDUAL**.
+Acceso: En Labster (recuerden que hace unas semanas debió llegarles una invitación sobre el curso y deben activar su cuenta) se encuentra activa la simulación "Secuenciación de nueva generación". La idea es que primero vean la clase y luego hagan la simulación para afianzar lo aprendido. 
+
+Entregable: Enviar una screenshot que indique que terminaron la simulación.
+
+Adicional: También se encuentran activas la simulaciones de: 
+- "Reacción en cadena de la polimerasa"
+- "Electroforesis en gel"
+
+NO son obligatorias, pero si las llevan a cabo se toman en cuenta como puntos extra.
+
+# Práctica 3-Parte I. Formatos y bases de datos. 
+
+## Características generales
+
+1. Práctica que se entrega en **parejas**. 
+
+2. Entregables: 
+  * Un archivo PDF con respuestas que se sube a clasroom. 
+  
+## Instrucciones 
+
+1. Elige dos artículos de cada color de la siguiente [lista](https://docs.google.com/spreadsheets/d/1y6yJ9gKC70aSWsxvxTCDHl0-zTTwOJgP/edit?usp=sharing&ouid=117981748854039384449&rtpof=true&sd=true), en total serán 6 artículos. 
+
+2. Por cada artículo seleccionado crea una [tabla como la siguiente](https://docs.google.com/spreadsheets/d/1sVHVqroQYSNat6CuqrsnhzpsABjypmpEzu80JC6bT4E/edit?usp=sharing) y llénala con la información que se solicita. 
+Para el llenado de la tabla te sugiero que leas los comentarios que hay en la columnas y sigas el ejemplo (fila de color gris), el artículo que se utilizó para el ejemplo se encuentra [aquí](https://drive.google.com/file/d/104waCTT23G_4Df_Cdx0wYmr4YBLvyqOt/view?usp=share_link). 
+
+**TIP**: La mayoría de la información que vas a buscar se encuentra en la sección de métodos del artículo.
+
+Puedes hacer tu tabla en una hoja de Google Sheets y poner el enlace en tu reporte (cuidando que pueda tener acceso) o poner tal cual la tabla, como ud prefiera. 
+
+
+3. Elige un artículo de los seis anteriores o busca uno que sea de tu interés y contesta las siguientes preguntas: 
+
+    a. De manera general, ¿De qué trata éste artículo? **TIP**: Esto puedes verlo en la sección del resumen o *Abstract*.
+    b. ¿Cuáles son los objetivos de la investigación? 
+    c. ¿Qué tipo de estudio es? (Metagenoma, genómico o metabarcoding)¿Por qué?.
+    d. Busca los archivos crudos que se utilizaron en la investigación en una base de datos, y coloca el link. Te recomiendo que descargues los archivos crudos en tu computadora. 
+    e. Investiga: ¿Cómo puedes saber el número de secuencias que hay en un archivo `FASTQ`?
+
+
+
+
+
+
