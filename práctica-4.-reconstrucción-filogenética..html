@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Práctica 4. Reconstrucción filogenética. | Manual de prácticas: Genómica computacional</title>
+  <meta name="description" content="4 Práctica 4. Reconstrucción filogenética. | Manual de prácticas: Genómica computacional" />
+  <meta name="generator" content="bookdown 0.30 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Práctica 4. Reconstrucción filogenética. | Manual de prácticas: Genómica computacional" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Práctica 4. Reconstrucción filogenética. | Manual de prácticas: Genómica computacional" />
+  
+  
+  
+
+<meta name="author" content="Nayeli Luis" />
+
+
+<meta name="date" content="2022-11-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="práctica-3..html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="práctica-1.-el-dogma-central-de-la-biología-molecular.html"><a href="práctica-1.-el-dogma-central-de-la-biología-molecular.html"><i class="fa fa-check"></i><b>1</b> Práctica 1. El dogma central de la biología molecular</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="práctica-1.-el-dogma-central-de-la-biología-molecular.html"><a href="práctica-1.-el-dogma-central-de-la-biología-molecular.html#características-generales"><i class="fa fa-check"></i><b>1.1</b> Características generales</a></li>
+<li class="chapter" data-level="1.2" data-path="práctica-1.-el-dogma-central-de-la-biología-molecular.html"><a href="práctica-1.-el-dogma-central-de-la-biología-molecular.html#instrucciones"><i class="fa fa-check"></i><b>1.2</b> Instrucciones</a></li>
+<li class="chapter" data-level="1.3" data-path="práctica-1.-el-dogma-central-de-la-biología-molecular.html"><a href="práctica-1.-el-dogma-central-de-la-biología-molecular.html#notas-importantes"><i class="fa fa-check"></i><b>1.3</b> Notas importantes</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="práctica-2.-secuenciación..html"><a href="práctica-2.-secuenciación..html"><i class="fa fa-check"></i><b>2</b> Práctica 2. Secuenciación.</a></li>
+<li class="chapter" data-level="3" data-path="práctica-3..html"><a href="práctica-3..html"><i class="fa fa-check"></i><b>3</b> Práctica 3.</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="práctica-3..html"><a href="práctica-3..html#parte-i.-formatos-y-bases-de-datos."><i class="fa fa-check"></i><b>3.1</b> Parte I. Formatos y bases de datos.</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="práctica-3..html"><a href="práctica-3..html#características-generales-1"><i class="fa fa-check"></i><b>3.1.1</b> Características generales</a></li>
+<li class="chapter" data-level="3.1.2" data-path="práctica-3..html"><a href="práctica-3..html#instrucciones-1"><i class="fa fa-check"></i><b>3.1.2</b> Instrucciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="práctica-3..html"><a href="práctica-3..html#parte-2.-control-de-calidad"><i class="fa fa-check"></i><b>3.2</b> Parte 2. Control de calidad</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="práctica-3..html"><a href="práctica-3..html#características-generales-2"><i class="fa fa-check"></i><b>3.2.1</b> Características generales</a></li>
+<li class="chapter" data-level="3.2.2" data-path="práctica-3..html"><a href="práctica-3..html#instrucciones-2"><i class="fa fa-check"></i><b>3.2.2</b> Instrucciones:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html"><i class="fa fa-check"></i><b>4</b> Práctica 4. Reconstrucción filogenética.</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#características-generales."><i class="fa fa-check"></i><b>4.1</b> Características generales.</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#entregables"><i class="fa fa-check"></i><b>4.1.1</b> Entregables:</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#instrucciones."><i class="fa fa-check"></i><b>4.2</b> Instrucciones.</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#obtención-de-secuencias"><i class="fa fa-check"></i><b>4.2.1</b> Obtención de secuencias</a></li>
+<li class="chapter" data-level="4.2.2" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#alineamieto"><i class="fa fa-check"></i><b>4.2.2</b> Alineamieto</a></li>
+<li class="chapter" data-level="4.2.3" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#construcción-del-árbol."><i class="fa fa-check"></i><b>4.2.3</b> Construcción del árbol.</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="práctica-4.-reconstrucción-filogenética..html"><a href="práctica-4.-reconstrucción-filogenética..html#cuestionario"><i class="fa fa-check"></i><b>4.3</b> Cuestionario</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Manual de prácticas: Genómica computacional</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="práctica-4.-reconstrucción-filogenética." class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Práctica 4. Reconstrucción filogenética.<a href="práctica-4.-reconstrucción-filogenética..html#práctica-4.-reconstrucción-filogenética." class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="características-generales." class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Características generales.<a href="práctica-4.-reconstrucción-filogenética..html#características-generales." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="entregables" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Entregables:<a href="práctica-4.-reconstrucción-filogenética..html#entregables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Ésta práctica se lleva a cabo en parejas.</li>
+<li>Un archivo en formato pdf con las respuestas del cuestionario, todas las preguntas deben contener sus respectivas referencias.</li>
+</ul>
+</div>
+</div>
+<div id="instrucciones." class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Instrucciones.<a href="práctica-4.-reconstrucción-filogenética..html#instrucciones." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>El objetivo de la construcción de un árbol filogenético es determinar la posible relación evoluitiva entre organismos de un grupo determinado. Para ésta práctica vamos a suponer que tenemos secuencias nuevas del gen <em>rcbL</em> de la planta de vainilla (<em>Vanilla sp.</em>):</p>
+<pre><code>&gt;Seq1-vanillasp
+ACCAAAGATACTGATATCTTGGCAGCATTCCGAGTAACTCCTCAACCGGGAGTTCCGCCTGAAGAAGCAGGGGCTGCGGT
+&gt;Seq2-vanillasp
+AGCTGCCGAATCTTCTACTGGTACATGGACAACTGTGTGGACTGATGGACTGACCAGTCTTGATCGTTACAAAGGGCGAT</code></pre>
+<div id="obtención-de-secuencias" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Obtención de secuencias<a href="práctica-4.-reconstrucción-filogenética..html#obtención-de-secuencias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Abre <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastn&amp;PAGE_TYPE=BlastSearch&amp;LINK_LOC=blasthome">BLAST</a> y coloca las secuencias en el recuadro de búsqueda. (<a href="https://drive.google.com/file/d/1gcxxkawjqT6yhRrBA5jRQaZh4MsnL5jM/view?usp=share_link">clic aqui</a> para ver figura de referencia). En la sección de <strong>Choose Search Set</strong> en <strong>Database</strong>, asegúrate de tener seleccionada la parte de <strong>Standard databases (nr etc.):</strong> y en el menú desplegable <strong>Nucleotide collection (nr/nt)</strong>. Y en la sección <strong>Program Selection</strong> debes tener seleccionado <strong>Highly similar sequences (megablast)</strong>. Finalmente da click en <strong>BLAST</strong>.</p></li>
+<li><p>Una vez que hayas daco clik en <strong>BLAST</strong>, te aparecerá una lista de organismos, cuyas secuencias son parecidas a las que ingresamos como problema. Como podrás notar, las secuencias aparecen en forma de tabla, en donde tenemos algunas columnas importantes como <strong>Scientific Name</strong> que es el nombre científico de los organismos a los que las secuencias se encuentran relacionados, <strong>S value</strong> que es el puntaje de similitud, <strong>E values</strong> que son las probabilidades aproximadas de que las secuencias similares identificadas no estén relacionadas por descendencia evolutiva (es decir, que sean similares solo por casualidad). La selección de secuencias homólogas a menudo se basa en un umbral de valor S y <strong>Accession</strong> que es el número de acceso al NCBI para conocer más del organismo o del proyecto.</p></li>
+<li><p>Selecciona 10 secuencias de las que te aparecen en el listado y da click en <strong>Download</strong> y selecciona <strong>FASTA (complete sequence)</strong> (<a href="https://drive.google.com/file/d/13eYukaLj9FquZKguK8sJwL6I4PkcKSfD/view?usp=share_link">clic aquí</a> para ver imagen de ejemplo). Guarda tu archivo como <code>vanilla-seqs.fasta</code>, aunque te apareza como formato <code>.txt</code>. Si quieres modifica el encabezado de tus secuencias.</p></li>
+<li><p>Descarga el programa <a href="https://www.megasoftware.net/"><code>MEGA</code></a>, es el programa que vamos a utilizar para llevar a cabo el alineamiento y la cosntrucción del árbol. <code>MEGA</code> tiene incluido dos programas para hacer alineamientos <code>ClustalW</code> y <code>MUSCLE</code>. Al momento de utilizarlos debemos editar algunos parámetors como <code>GOP</code> (<em>gap open penalty</em>) y <code>GEP</code> (<em>gap extension penalty</em>). Estos programas tratan de maximizar el alineamiento maximizando el puntaje de “match”. Para obtener la alineación, se introducen espacios (el carácter <code>-</code>) correspondientes a eventos de inserción/eliminación ancestrales hipotéticos en las secuencias en los sitios que maximizan la puntuación de alineación. Siempre que se agregue un espacio de forma aislada, la puntuación de alineación se penaliza con la cantidad especificada por el parámetro GOP, y cuando se agregan espacios posteriores adyacentes a un espacio existente, la puntuación de alineación se penaliza con la cantidad especificada por el parámetro GEP.</p></li>
+</ul>
+</div>
+<div id="alineamieto" class="section level3 hasAnchor" number="4.2.2">
+<h3><span class="header-section-number">4.2.2</span> Alineamieto<a href="práctica-4.-reconstrucción-filogenética..html#alineamieto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Abre el programa <code>MEGA</code>, da clic en <code>ALIGN</code> &gt;&gt; <code>Edit/Build Alignment</code>&gt;&gt; <code>Retrieve sequence from a file</code> &gt;&gt; <code>Ok</code> y seleccionar el archivo que generamos en el paso anterior. Esto te llevará a una nueva ventana con tus secuencias no alineadas, selecciona todas tus secuencias dando <code>CTRL + A</code> y da clic en el botón que tiene forma de brazo (corresponde al algoritmo de <code>MUSCLE</code>) &gt;&gt; <code>Align DNA</code>. Deja los parámetros por default y exporta el alineamiento dando clic en <code>Data</code> &gt;&gt; <code>Export Alignment</code> &gt;&gt; <code>FASTA format</code>.</li>
+</ul>
+</div>
+<div id="construcción-del-árbol." class="section level3 hasAnchor" number="4.2.3">
+<h3><span class="header-section-number">4.2.3</span> Construcción del árbol.<a href="práctica-4.-reconstrucción-filogenética..html#construcción-del-árbol." class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Da click en <code>PHYLOGENY</code> &gt;&gt; <code>Construct/test Maximum Likelihood Tree</code> y selecciona el archivo con tus secuencias alineadas. Te abrira un recuadro, selecciona <code>Nucleotide Sequences</code>. Te saldrá otro recuadro con la pregunta “Protein-coding nucleotide sequence data?” selecciona “Si/Yes” &gt;&gt; <code>Standard</code> &gt;&gt; “Would you like to use currently active data? <code>Yes</code> y finalmente te abrirá un recuado con los métodos que puedes seleccionar. Por ejemplo el modelo evolutivo, por default tendrás seleccionado <code>Jukes-Cantor</code> y las opciones para inferir el árbol <code>TREE INFEERNCE OPTIONS</code> por default te saldra <code>Nearest Neighbor Interchange (NNI)</code>. El resto de los parámetros déjalos tal cual y da <code>Ok</code>. Listo tienes un árbol, guarda la imagen dando clic en <code>Image</code> y colocando el siguiente nombre: <code>arbol_jukes_cantor.png</code>.</p></li>
+<li><p>Vuelve a repetir todo el proceso anterior pero en vez de elegir el modelo evolutivo de Jukes-Cantor elige el modelo de Kimura y guarda la imagen de éste segundo árbol como <code>arbol_kimura.png</code>.</p></li>
+</ul>
+</div>
+</div>
+<div id="cuestionario" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Cuestionario<a href="práctica-4.-reconstrucción-filogenética..html#cuestionario" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Describe en un párrafo las características del género <em>Vanilla sp.</em>. Usa términos que tu comprendas.</li>
+<li>¿Para qué sirve el gen <em>rcbL</em>?</li>
+<li>¿Qué significa BLAST y cómo funciona?</li>
+<li>¿Por qué es importante alinear antes de llevar a cabo la construcción de un árbol filogenético?</li>
+<li>¿Cómo funciona <code>MUSCLE</code>?¿Qué significa que no haya espacios (gaps <code>-</code>) en el alineamiento?</li>
+<li>Adjunta las imágenes de los árboles que obtuviste ¿Son iguales?, ¿Qué implicaciones tiene escoger uno u otro modelo evolutivo? De manera general, ¿Qué podrías concluir de cada árbol?</li>
+</ol>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="práctica-3..html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": false,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
